@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="X:\customers\igz\Workshop\Workshop.BusinessLogicLayer\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="X:\customers\igz\Workshop\Workshop.BusinessLogicLayer\.editorconfig" />
+  </ItemGroup>
+
+</Project>

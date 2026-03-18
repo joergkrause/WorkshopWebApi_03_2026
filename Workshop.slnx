@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/SolutionItems/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Project Path="Workshop.BusinessLogicLayer/Workshop.BusinessLogicLayer.csproj" />
+  <Project Path="Workshop.DataAccessLayer/Workshop.DataAccessLayer.csproj" />
+  <Project Path="Workshop.DataTransferObjects/Workshop.DataTransferObjects.csproj" />
+  <Project Path="Workshop.DomainModels/Workshop.DomainModels.csproj" />
+  <Project Path="Workshop.ServiceLayer/Workshop.ServiceLayer.csproj" />
+</Solution>
