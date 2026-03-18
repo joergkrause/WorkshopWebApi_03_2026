@@ -1,6 +1,11 @@
 <Solution>
   <Folder Name="/SolutionItems/">
     <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="Directoy.Build.targets" />
+    <File Path="README.md" />
   </Folder>
   <Project Path="Workshop.BusinessLogicLayer/Workshop.BusinessLogicLayer.csproj" />
   <Project Path="Workshop.DataAccessLayer/Workshop.DataAccessLayer.csproj" />
