@@ -13,4 +13,13 @@
     <None Include="X:\customers\igz\Workshop\Workshop.BusinessLogicLayer\.editorconfig" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Workshop.DataAccessLayer\Workshop.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\Workshop.DataTransferObjects\Workshop.DataTransferObjects.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -3,7 +3,7 @@ using Workshop.DomainModels;
 
 namespace Workshop.DataAccessLayer;
 
-public class ProjectDbContext : DbContext
+public class ProjectDbContext(DbContextOptions<ProjectDbContext> options) : DbContext(options)
 {
 
   public override int SaveChanges()
