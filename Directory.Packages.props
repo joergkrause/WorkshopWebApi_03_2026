@@ -10,8 +10,15 @@
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.5" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.InMemory" Version="10.0.5" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.5" />
-		<PackageVersion Include="coverlet.collector" Version="6.0.4" />
-		<PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
-		<PackageVersion Include="xunit.v3" Version="3.1.4" />
+    <PackageVersion Include="coverlet.collector" Version="6.0.4" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageVersion Include="NSwag.ApiDescription.Client" Version="14.6.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageVersion>
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="10.1.5" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.1.5" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.1.5" />
+    <PackageVersion Include="xunit.v3" Version="3.2.2" />
   </ItemGroup>
 </Project>

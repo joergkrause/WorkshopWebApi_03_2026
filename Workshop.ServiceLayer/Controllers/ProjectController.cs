@@ -17,14 +17,14 @@ public class ProjectController(IProjectService projectService) : ControllerBase
 {
 
   [HttpGet]
-  [ProducesResponseType(StatusCodes.Status200OK)]
+  [ProducesResponseType(typeof(IEnumerable<ProjectDto>), StatusCodes.Status200OK)]
   public async Task<IActionResult> GetProjects()
   {
     return Ok(await projectService.GetProjects());
   }
 
   [HttpGet("{id:int}")]
-  [ProducesResponseType(StatusCodes.Status200OK)]
+  [ProducesResponseType(typeof(ProjectDto), StatusCodes.Status200OK)]
   [ProducesResponseType(StatusCodes.Status404NotFound)]
   [ProducesResponseType(StatusCodes.Status400BadRequest)]
   public async Task<IActionResult> GetProjectById([FromRoute] int id)
@@ -39,12 +39,12 @@ public class ProjectController(IProjectService projectService) : ControllerBase
 
   [HttpPost]
   [ProducesResponseType(StatusCodes.Status201Created)]
-  [ProducesResponseType(typeof(ModelStateDictionary), StatusCodes.Status400BadRequest)]
+  [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
   public async Task<IActionResult> CreateProject([FromBody] ProjectNewDto project)
   {
     if (!ModelState.IsValid)
     {
-      return BadRequest(ModelState);
+      return BadRequest("Error");
     }
     var result = await projectService.CreateProject(project);
     return CreatedAtAction(nameof(GetProjectById), new { id = result.Id }, result);

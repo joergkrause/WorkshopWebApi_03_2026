@@ -19,6 +19,7 @@ builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddSwaggerDocumentation();
 
 var app = builder.Build();
 
@@ -26,6 +27,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
   app.MapOpenApi();
+  app.UseSwaggerDocumentation();
 }
 
 app.UseHttpsRedirection();

@@ -15,4 +15,5 @@
   <Project Path="Workshop.DataTransferObjects/Workshop.DataTransferObjects.csproj" />
   <Project Path="Workshop.DomainModels/Workshop.DomainModels.csproj" />
   <Project Path="Workshop.ServiceLayer/Workshop.ServiceLayer.csproj" />
+  <Project Path="Workshop.ServiceTestConsole/Workshop.ServiceTestConsole.csproj" Id="be264645-11df-4564-8a58-b89542613c70" />
 </Solution>
