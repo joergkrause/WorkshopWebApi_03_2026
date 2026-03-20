@@ -5,7 +5,7 @@ namespace Workshop.DataTransferObjects;
 
 public class ProjectNewDto
 {
-  [Required, StringLength(30)]
+  [Required, StringLength(30, ErrorMessage = "19999")]
   [IgzCustomerNumber(Prefix = "PE")]
   public required string Name { get; set; }
 

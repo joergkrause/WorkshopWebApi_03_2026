@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Workshop.BusinessLogicLayer;
 using Workshop.DataTransferObjects;
 
@@ -38,9 +39,13 @@ public class ProjectController(IProjectService projectService) : ControllerBase
 
   [HttpPost]
   [ProducesResponseType(StatusCodes.Status201Created)]
-  [ProducesResponseType(StatusCodes.Status400BadRequest)]
+  [ProducesResponseType(typeof(ModelStateDictionary), StatusCodes.Status400BadRequest)]
   public async Task<IActionResult> CreateProject([FromBody] ProjectNewDto project)
   {
+    if (!ModelState.IsValid)
+    {
+      return BadRequest(ModelState);
+    }
     var result = await projectService.CreateProject(project);
     return CreatedAtAction(nameof(GetProjectById), new { id = result.Id }, result);
   }

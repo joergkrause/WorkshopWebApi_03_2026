@@ -1,6 +1,33 @@
 @Workshop.ServiceLayer_HostAddress = http://localhost:5042
 
-GET {{Workshop.ServiceLayer_HostAddress}}/weatherforecast/
+### Get all projects
+GET {{Workshop.ServiceLayer_HostAddress}}/api/project
 Accept: application/json
+
+### Get project by id
+GET {{Workshop.ServiceLayer_HostAddress}}/api/project/1
+Accept: application/json
+
+### Create a new project
+POST {{Workshop.ServiceLayer_HostAddress}}/api/project
+Content-Type: application/json
+
+{
+  "name": "PE-55679",
+  "description": "Sample project 3"
+}
+
+### Update an existing project
+PUT {{Workshop.ServiceLayer_HostAddress}}/api/project/2
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "PE-12345-Updated",
+  "description": "Updated project description"
+}
+
+### Delete a project
+DELETE {{Workshop.ServiceLayer_HostAddress}}/api/project/1
 
 ###

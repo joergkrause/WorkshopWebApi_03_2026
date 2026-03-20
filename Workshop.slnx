@@ -7,6 +7,9 @@
     <File Path="Directoy.Build.targets" />
     <File Path="README.md" />
   </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="Workshop.UnitTests/Workshop.UnitTests.csproj" Id="db80dfaa-cda9-4f45-91ad-d7c246e5717b" />
+  </Folder>
   <Project Path="Workshop.BusinessLogicLayer/Workshop.BusinessLogicLayer.csproj" />
   <Project Path="Workshop.DataAccessLayer/Workshop.DataAccessLayer.csproj" />
   <Project Path="Workshop.DataTransferObjects/Workshop.DataTransferObjects.csproj" />
